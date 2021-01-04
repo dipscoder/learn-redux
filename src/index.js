@@ -29,6 +29,8 @@ const counter = (state = 0, action) => {
   }
 }
 
+// ADD REDUCER TO THE STORE
+const store = createStore(counter)
 
 
 ReactDOM.render(
