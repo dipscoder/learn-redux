@@ -6,40 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from "redux";
 
 
-// ACTION
-const increment = () => {
-  return {
-    type: "INCREMENT"
-  }
-}
-const decrement = () => {
-  return {
-    type: "DECREMENT"
-  }
-}
-
-// REDUCER
-const counter = (state = 0, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return state + 1;
-
-    case "DECREMENT":
-      return state - 1;
-  }
-}
-
-// ADD REDUCER TO THE STORE
-const store = createStore(counter)
-
-
-// DISPLAY IT IN THE CONSOLE
-store.subscribe(() => console.log(store.getState()))
-
-// DISPATCH
-store.dispatch(increment())
-store.dispatch(decrement())
-store.dispatch(decrement())
 
 ReactDOM.render(
   <React.StrictMode>
